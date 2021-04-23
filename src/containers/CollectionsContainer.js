@@ -1,6 +1,6 @@
-// class component 
-
 import React from 'react';
+import CollectionInput from '../components/CollectionInput'
+import Collections from '../components/Collections'
 
 class CollectionsContainer extends React.Component {
 
@@ -9,6 +9,8 @@ class CollectionsContainer extends React.Component {
         return (
             <div>
                 CollectionsContainer
+                < CollectionInput/>
+                < Collections />
             </div>
         )
     }

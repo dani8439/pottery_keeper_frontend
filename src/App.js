@@ -12,8 +12,8 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        Hello World!
-        < CollectionsContainer/>
+        Welcome to Pottery Keeper!
+        <CollectionsContainer />
       </div>
     );
   }
