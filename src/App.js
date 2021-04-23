@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchCollections } from './actions/fetchCollections'
+import CollectionsContainer from './containers/CollectionsContainer'
 
 class App extends React.Component {
 
@@ -12,6 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         Hello World!
+        < CollectionsContainer/>
       </div>
     );
   }
