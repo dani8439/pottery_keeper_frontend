@@ -5,14 +5,14 @@ import CollectionsContainer from './containers/CollectionsContainer'
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchCollections({type: 'FETCH_COLLECTIONS', payload: {name: 'My Pieces'}})
-  }
+  // componentDidMount() {
+  //   this.props.fetchCollections({type: 'FETCH_COLLECTIONS', payload: {name: 'My Pieces'}})
+  // }
 
   render(){
     return (
       <div className="App">
-        Welcome to Pottery Keeper!
+        <h1>Welcome to Pottery Keeper!</h1>
         <CollectionsContainer />
       </div>
     );

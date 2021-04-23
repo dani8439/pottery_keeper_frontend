@@ -1,9 +1,10 @@
 export function fetchCollections(action) {
-    return action
+    // return action
+    console.log('inside fetch collections')
 
-    // fetch('http://localhost:3000/api/v1/collections')
-    // .then(resp => resp.json())
-    // .then(resp => console.log(resp))
+    fetch('http://localhost:3000/api/v1/collections')
+    .then(resp => resp.json())
+    .then(resp => console.log(resp))
     
 
 }
