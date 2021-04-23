@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchCollections } from './actions/fetchCollections'
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/collections')
-    .then(resp => resp.json())
-    .then(resp => console.log(resp))
+    this.props.fetchCollections({type: 'FETCH_COLLECTIONS', payload: {name: 'My Pieces'}})
   }
 
   render(){
