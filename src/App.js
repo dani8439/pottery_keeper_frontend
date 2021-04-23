@@ -1,12 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/api/v1/collections/1/pieces')
-  //   .then(resp => resp.json())
-  //   .then(resp => console.log(resp))
-  // }
+  componentDidMount() {
+    fetch('http://localhost:3000/api/v1/collections')
+    .then(resp => resp.json())
+    .then(resp => console.log(resp))
+  }
 
   render(){
     return (
@@ -17,4 +18,10 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return {
+//     collections: state.collections
+//   }
+// }
+
+export default connect(null, {fetchCollections})(App);
