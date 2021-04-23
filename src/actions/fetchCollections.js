@@ -1,4 +1,4 @@
-import Collections from "../components/Collections"
+// import Collections from "../components/Collections"
 
 export function fetchCollections(action) {
     // thunk allowing us to return a function inside another function, passing in dispatch function as an argument, so we can use inside of our action creater, and dispatch response from our fetch request.
@@ -7,10 +7,10 @@ export function fetchCollections(action) {
 
         fetch('http://localhost:3000/api/v1/collections')
         .then(resp => resp.json())
-        .then(resp => dispatch({
+        .then(data => dispatch({
             // dispatch to our reducer.
             type: 'FETCH_COLLECTIONS', 
-            payload: resp 
+            payload: data
         }))
 
     }
