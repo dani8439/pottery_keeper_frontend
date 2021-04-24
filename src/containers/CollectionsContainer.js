@@ -16,7 +16,7 @@ class CollectionsContainer extends React.Component {
     render() {
         return (
             <div>
-                <CollectionInput/>
+                <CollectionInput/><br></br>
                 <Collections collections={this.props.collections}/>
             </div>
         )

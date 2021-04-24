@@ -6,7 +6,7 @@ const Collections = (props) => {
     return (
         <div>
             <h3>Your Collections</h3>
-            {props.collections.map(collection => <li key={collection.id}>{collection.name} - {`${collection.pieces.length}`} pieces</li>)}
+            {props.collections.map(collection => <div key={collection.id}><h2>{collection.name}</h2>  <img src={collection.main_image}/> <p>{`${collection.pieces.length}`} pieces</p></div>)}
         </div>
     )
 }
