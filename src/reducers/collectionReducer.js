@@ -3,6 +3,8 @@ export default function collectionReducer(state = {collections: []}, action) {
     switch (action.type) {
         case 'FETCH_COLLECTIONS':
             return {collections: action.payload}
+        case 'ADD_COLLECTION':
+            return {...state, collections: [...state.collections, action.payload] }
         default: 
             return state 
     }

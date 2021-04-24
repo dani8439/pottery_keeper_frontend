@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {addCollection} from '../actions/addCollection'
 
 class CollectionInput extends React.Component {
 
@@ -16,8 +18,9 @@ class CollectionInput extends React.Component {
 
     }
 
-    handleSubmit = () => {
-        
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.addCollection(this.state)
     }
 
     render() {
@@ -37,4 +40,4 @@ class CollectionInput extends React.Component {
 
 }
 
-export default CollectionInput
+export default connect(null, {addCollection})(CollectionInput)
