@@ -5,11 +5,14 @@ import React from 'react';
 const Collection = (props) => {
     console.log(props)
 
+    let collection = props.collections[props.match.params.id - 1]
+    console.log(collection)
+
     return (
         <div>
-            <h2>{props.collection.name}</h2>  
-            <img src={props.collection.main_image}/> 
-            <p>{`${props.collection.pieces.length}`} pieces</p>
+            {collection ? <h2>{collection.name}</h2> : null}
+            {collection ? <img src={collection.main_image}/> : null}
+            {collection ? <p>{`${collection.pieces.length}`} pieces</p> : null}
             
         </div>
     )

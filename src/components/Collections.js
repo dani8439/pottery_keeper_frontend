@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route} from 'react-router-dom';
 import Collection from './Collection';
 
 // functional component. Just iterating and displaying collection info.
