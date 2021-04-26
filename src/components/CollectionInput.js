@@ -21,6 +21,10 @@ class CollectionInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.addCollection(this.state)
+        this.setState({
+            name: '', 
+            main_image: ''
+        })
     }
 
     render() {
