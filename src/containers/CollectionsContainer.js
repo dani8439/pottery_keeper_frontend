@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
+import {Route} from 'react-router-dom';
 import {fetchCollections} from '../actions/fetchCollections'
 import CollectionInput from '../components/CollectionInput'
 import Collections from '../components/Collections'
@@ -16,8 +16,8 @@ class CollectionsContainer extends React.Component {
     render() {
         return (
             <div>
-                <CollectionInput/><br></br>
-                <Collections collections={this.props.collections}/>
+                <Route path='/collections/new' component={CollectionInput}/>
+                <Route exact path='/collections' render={() => <Collections collections={this.props.collections} />}/>
             </div>
         )
     }
