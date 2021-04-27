@@ -1,11 +1,14 @@
 import React from 'react';
+import PieceInput from '../components/PieceInput'
+import Pieces from '../components/Pieces'
 
 class PiecesContainer extends React.Component {
 
     render() {
         return (
             <div>
-                Pieces 
+                <PieceInput />
+                <Pieces pieces={this.props.collection && this.props.collection.pieces}/>
             </div>
         )
     }

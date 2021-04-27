@@ -18,7 +18,7 @@ const Collection = (props) => {
             {collection ? <img src={collection.main_image}/> : null}
             {collection ? <p>{`${collection.pieces.length}`} pieces</p> : null}
 
-            <PiecesContainer />
+            <PiecesContainer collection={collection}/>
             
         </div>
     )
