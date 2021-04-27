@@ -7,7 +7,9 @@ const Pieces = (props) => {
 
     return (
         <div>
-            Pieces
+            {/*{props.pieces.map(piece => 
+                <li key={piece.id}>{piece.pattern_name} {piece.piece_name} {piece.image_url} {piece.quantity}</li>
+            )} */}
         </div>
     )
 }
