@@ -12,7 +12,7 @@ const Collections = (props) => {
             <h3>Your Collections</h3>
             {props.collections.map(collection => 
                 <div key={collection.id}>
-                    <Link path={`/collections/${collection.id}`}>{collection.name}</Link>
+                    <Link to={`/collections/${collection.id}`}>{collection.name}</Link>
                 </div>)}
 
 

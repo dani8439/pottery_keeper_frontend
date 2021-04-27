@@ -1,9 +1,10 @@
 import React from 'react';
+import {Redirect} from 'react-router';
 
 // functional component. Not updating state... 
 
 const Collection = (props) => {
-    console.log(props)
+    
 
     // router props and regular props to get to the id
     let collection = props.collections[props.match.params.id - 1]
@@ -11,6 +12,7 @@ const Collection = (props) => {
 
     return (
         <div>
+            {/* {collection ? null : <Redirect to='/collections/' />} */}
             {collection ? <h2>{collection.name}</h2> : null}
             {collection ? <img src={collection.main_image}/> : null}
             {collection ? <p>{`${collection.pieces.length}`} pieces</p> : null}
