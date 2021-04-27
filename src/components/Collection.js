@@ -1,5 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router';
+import PiecesContainer from '../containers/PiecesContainer'
 
 // functional component. Not updating state... 
 
@@ -16,6 +17,8 @@ const Collection = (props) => {
             {collection ? <h2>{collection.name}</h2> : null}
             {collection ? <img src={collection.main_image}/> : null}
             {collection ? <p>{`${collection.pieces.length}`} pieces</p> : null}
+
+            <PiecesContainer />
             
         </div>
     )

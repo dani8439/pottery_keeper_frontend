@@ -20,7 +20,7 @@ class CollectionsContainer extends React.Component {
                 <Switch>
                     <Route path='/collections/new' component={CollectionInput}/>
                     <Route path='/collections/:id' render={(routerProps) => <Collection {...routerProps} collections={this.props.collections} />}/>
-                    <Route exact path='/collections' render={(routerProps) => <Collections {...routerProps} collections={this.props.collections} />}/>
+                    <Route path='/collections' render={(routerProps) => <Collections {...routerProps} collections={this.props.collections} />}/>
                 </Switch>
             </div>
         )
