@@ -5,6 +5,7 @@ import React from 'react';
 const Collection = (props) => {
     console.log(props)
 
+    // router props and regular props to get to the id
     let collection = props.collections[props.match.params.id - 1]
     console.log(collection)
 
