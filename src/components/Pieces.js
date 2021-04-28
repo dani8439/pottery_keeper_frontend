@@ -4,11 +4,10 @@ import React from 'react';
 
 const Pieces = (props) => {
     console.log(props.pieces)
-    debugger;
 
 
     return (
-        // {/* Add in check because first time props come through, it's undefined*/}
+        // {/* Add in check because first time props come through, it's undefined. With react, when you refresh page, state and store are cleared out.*/}
         <div>
             {props.pieces && props.pieces.map(piece => 
             <div key={piece.id}>
