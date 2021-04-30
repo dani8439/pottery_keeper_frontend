@@ -7,7 +7,7 @@ class PiecesContainer extends React.Component {
     render() {
         return (
             <div>
-                <PieceInput />
+                <PieceInput collection={this.props.collection}/>
                 <Pieces pieces={this.props.collection && this.props.collection.pieces}/>
             </div>
         )

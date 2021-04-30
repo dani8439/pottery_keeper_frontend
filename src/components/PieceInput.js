@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { addPiece } from '../actions/addPiece';
 
 
 // controlled form, store state. Class component 
@@ -12,18 +13,26 @@ class PieceInput extends React.Component {
         piece_name: '',
         pattern_name: '',
         quantity: '',
-        image_url: '',
-        // collection_id: 
+        image_url: ''
     }
 
-    handleChange = () => {
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        // addPiece(this.state, this.props.id)
 
     }
 
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <h2>Add a piece to this collection:</h2>
                     <label>Piece Name:</label>
                     <input type="text" placeholder="Piece Name" name="piece_name" value={this.state.piece_name} onChange={this.handleChange}/><br></br>
@@ -37,6 +46,7 @@ class PieceInput extends React.Component {
                     <label>Quantity:</label>
                     <input type="text" placeholder="Quantity" name="quantity" value={this.state.quantity} onChange={this.handleChange}/><br></br>
                     <br></br>
+                    <input type="submit"></input>
                 </form>
             </div>
         )
