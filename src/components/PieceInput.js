@@ -25,7 +25,13 @@ class PieceInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        // addPiece(this.state, this.props.id)
+        this.props.addPiece(this.state, this.props.collection.id)
+        this.setState({
+            piece_name: '',
+            pattern_name: '',
+            quantity: '',
+            image_url: ''
+        })
 
     }
 
@@ -54,4 +60,4 @@ class PieceInput extends React.Component {
 
 }
 
-export default connect(null)(PieceInput); 
+export default connect(null, {addPiece})(PieceInput); 

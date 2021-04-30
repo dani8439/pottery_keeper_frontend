@@ -9,7 +9,7 @@ export const addPiece = (piece, collectionId) => {
             body: JSON.stringify(piece)
         })
         .then(resp => resp.json())
-        .then(piece => dispatch({type: 'ADD_PIECE', payload: piece}))
+        .then(collection => dispatch({type: 'ADD_PIECE', payload: collection}))
     }
 
 }
