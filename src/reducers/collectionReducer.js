@@ -16,7 +16,7 @@ export default function collectionReducer(state = {collections: []}, action) {
             return {...state, collections: collections}
 
         case 'DELETE_PIECE':
-            debugger;
+            // debugger;
             let collectionsTwo = state.collections.map(collection => {
                 if (collection.id === action.payload.id) {
                     return action.payload
