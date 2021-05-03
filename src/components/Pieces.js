@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {deletePiece} from '../actions/deletePiece';
 
 // functional component because sending down props through PieceInput. And just rendering out the pieces. 
 
@@ -7,8 +9,8 @@ const Pieces = (props) => {
 
 
     // because functional component, have to define with const keyword.
-    const handleDelete = () => {
-
+    const handleDelete = (piece) => {
+        props.deletePiece(piece.id, piece.collection_id)
     }
 
 
@@ -20,11 +22,11 @@ const Pieces = (props) => {
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url}/>
                 <br></br>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={() => handleDelete(piece)}>Delete</button>
             </div>
             )}
         </div>
     )
 }
 
-export default Pieces 
+export default connect(null, {deletePiece})(Pieces) 
