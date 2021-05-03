@@ -25,6 +25,17 @@ export default function collectionReducer(state = {collections: []}, action) {
                 }
             })
             return {...state, collections: collectionsTwo}
+        
+        case 'EDIT_COLLECTION':
+            let collectionsThree = state.collections.map(collection => {
+                if (collection.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return collection
+                }
+            })
+            return {...state, collections: collectionsThree}
+
         default: 
             return state 
     }
