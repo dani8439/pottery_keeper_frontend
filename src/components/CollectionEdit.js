@@ -31,11 +31,11 @@ class CollectionEdit extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Edit Collection Name:</label>
+                    <label>Edit Name:</label>
                     <input type="text" placeholder="Name" name="name" onChange={this.handleChange} value={this.state.name}/><br></br>
                     <br></br>
-                    <label>Edit Main Image:</label>
-                    <input type="text" placeholder="Main Image" name="main_image" onChange={this.handleChange} value={this.state.main_image}/><br></br>
+                    <label>Edit Image:</label>
+                    <input type="text" placeholder="Image" name="main_image" onChange={this.handleChange} value={this.state.main_image}/><br></br>
                     <input type="submit"/>
                 </form>
             </div>
@@ -43,5 +43,9 @@ class CollectionEdit extends React.Component {
     }
 
 }
+
+// CollectionEdit.defaultProps = {
+//     collections: {}
+// }
 
 export default connect(null, {editCollection})(CollectionEdit)
