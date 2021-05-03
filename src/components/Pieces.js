@@ -13,6 +13,8 @@ const Pieces = (props) => {
             <div key={piece.id}>
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url}/>
+                <br></br>
+                <button>Delete</button>
             </div>
             )}
         </div>
