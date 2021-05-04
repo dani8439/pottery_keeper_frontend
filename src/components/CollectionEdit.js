@@ -5,6 +5,7 @@ import {editCollection} from '../actions/editCollection';
 
 class CollectionEdit extends React.Component {
 
+    // how to have state be existing data so it can all update and be switched?
     state = {
         name: '', 
         main_image: ''
