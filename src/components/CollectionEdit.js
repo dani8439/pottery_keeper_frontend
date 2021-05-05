@@ -33,7 +33,7 @@ class CollectionEdit extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Edit Name:</label>
-                    <input type="text" placeholder="Name" name="name" onChange={this.handleChange} value={this.state.name}/><br></br>
+                    <input type="text" placeholder={"Name"} name="name" onChange={this.handleChange} value={this.state.name}/><br></br>
                     <br></br>
                     <label>Edit Image:</label>
                     <input type="text" placeholder="Image" name="main_image" onChange={this.handleChange} value={this.state.main_image}/><br></br>
