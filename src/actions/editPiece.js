@@ -1,4 +1,5 @@
-export const editPiece = (collectionId, pieceId) => {
+export const editPiece = (piece, collectionId, pieceId) => {
+    // don't think this is correct.
     return (dispatch) => {
        fetch(`http://localhost:3000/api/v1/collections/${collectionId}/pieces/${pieceId}`, {
            headers: {
@@ -6,12 +7,12 @@ export const editPiece = (collectionId, pieceId) => {
                'Accept': 'application/json'
            },
            method: 'PATCH',
-           body: JSON.stringify(data)
+           body: JSON.stringify(piece)
        }) 
        .then(resp => resp.json())
-       .then(data => dispatch({
+       .then(piece => dispatch({
            type: 'EDIT_PIECE',
-           payload: data 
+           payload: piece
 
        }))
     }

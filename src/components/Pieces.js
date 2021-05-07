@@ -17,6 +17,8 @@ const Pieces = (props) => {
     const handleEdit = (piece) => {
         props.editPiece(piece.id, piece.collection_id)
     }
+    
+
 
 
     return (
@@ -36,4 +38,4 @@ const Pieces = (props) => {
     )
 }
 
-export default connect(null, {deletePiece})(Pieces) 
+export default connect(null, {deletePiece, editPiece})(Pieces) 
