@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {deletePiece} from '../actions/deletePiece';
+import {editPiece} from '../actions/editPiece';
 
 // functional component because sending down props through PieceInput. And just rendering out the pieces. 
 
-const Pieces = (props, handleEdit) => {
+const Pieces = (props) => {
     console.log(props.pieces)
 
 
