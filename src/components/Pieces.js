@@ -4,13 +4,17 @@ import {deletePiece} from '../actions/deletePiece';
 
 // functional component because sending down props through PieceInput. And just rendering out the pieces. 
 
-const Pieces = (props) => {
+const Pieces = (props, handleEdit) => {
     console.log(props.pieces)
 
 
     // because functional component, have to define with const keyword.
     const handleDelete = (piece) => {
         props.deletePiece(piece.id, piece.collection_id)
+    }
+
+    const handleEdit = (piece) => {
+        props.editPiece(piece.id, piece.collection_id)
     }
 
 
@@ -22,7 +26,9 @@ const Pieces = (props) => {
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url}/>
                 <br></br>
+                <button onClick={() => handleEdit(piece)}>Edit</button>
                 <button onClick={() => handleDelete(piece)}>Delete</button>
+                
             </div>
             )}
         </div>
