@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {editPiece} from '../actions/editPiece'
 
 class PieceEdit extends React.Component {
 
@@ -16,11 +18,23 @@ class PieceEdit extends React.Component {
 
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        let piece = {...this.state, id: this.props.piece.id}
+        this.props.editPiece(piece)
+        this.setState({
+            piece_name: '',
+            pattern_name: '',
+            quantity: '',
+            image_url: ''
+        })
+    }
+
     render() {
         return (
             <div>
                 <h1>Edit Piece</h1>
-                <form onSubmit={}>
+                <form onSubmit={this.handleSubmit}>
                 <label>Piece Name:</label>
                     <input type="text" placeholder="Piece Name" name="piece_name" value={this.state.piece_name} onChange={this.handleChange}/><br></br>
                     <br></br>
@@ -42,4 +56,4 @@ class PieceEdit extends React.Component {
     }
 }
 
-export default PieceEdit;
+export default connect(null, {editPiece})(PieceEdit);
