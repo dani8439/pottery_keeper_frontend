@@ -2,16 +2,33 @@ import React from 'react';
 import PieceInput from '../components/PieceInput'
 import Pieces from '../components/Pieces'
 import PieceEdit from '../components/PieceEdit'
+import {connect} from 'react-redux'
 
 class PiecesContainer extends React.Component {
 
-    // handleEdit = (piece) => {
-    //     this.setState({
-    //         pieceId: piece.id
-    //     })
+    // state = {
+    //     isEditing: false
+    // }
+
+    handleEdit = (piece) => {
+        this.setState({
+            pieceId: piece.id
+        })
+    }
+
+    // toggleEdit() {
+    //     this.setState({isEditing: !this.state.isEditing})
     // }
 
     render() {
+        // if (this.state.isEditing) {
+        //     return (
+        //         <div>
+        //             <h1>Edit Piece</h1>
+        //             <piece form coming soon />
+        //         </div>
+        //     )
+        // }
         return (
             <div>
                 <PieceInput collection={this.props.collection}/>
