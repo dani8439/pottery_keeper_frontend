@@ -19,7 +19,6 @@ class PieceEdit extends React.Component {
     }
 
     handleSubmit = (event) => {
-        console.log(piece)
         event.preventDefault();
         let piece = {...this.state, id: this.props.piece.id}
         this.props.editPiece(piece)
