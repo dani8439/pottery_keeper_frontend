@@ -15,7 +15,7 @@ const Pieces = (props) => {
     }
 
     const handleEdit = (piece) => {
-        props.editPiece(piece.id, piece.collection_id)
+        props.editPiece(piece, piece.collection_id)
     }
     
 
