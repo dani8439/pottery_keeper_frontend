@@ -11,6 +11,11 @@ class CollectionEdit extends React.Component {
         main_image: ''
     }
 
+    // state = {
+    //     name: this.props.name, 
+    //     main_image: this.props.main_image
+    // }
+
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
@@ -28,15 +33,21 @@ class CollectionEdit extends React.Component {
         })
     }
 
+    // const mapStateToProps = (state, ownProps) => {
+    //     return {
+
+    //     }
+    // }
+
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Edit Name:</label>
-                    <input type="text" placeholder={"Name"} name="name" onChange={this.handleChange} value={this.state.name}/><br></br>
+                    <input type="text" placeholder="" name="name" onChange={this.handleChange} value={this.state.name}/><br></br>
                     <br></br>
                     <label>Edit Image:</label>
-                    <input type="text" placeholder="Image" name="main_image" onChange={this.handleChange} value={this.state.main_image}/><br></br>
+                    <input type="text" placeholder="" name="main_image" onChange={this.handleChange} value={this.state.main_image}/><br></br>
                     <input type="submit"/>
                 </form>
             </div>
@@ -50,3 +61,4 @@ class CollectionEdit extends React.Component {
 // }
 
 export default connect(null, {editCollection})(CollectionEdit)
+// export default connect(mapStateToProps, {editCollection})(CollectionEdit)

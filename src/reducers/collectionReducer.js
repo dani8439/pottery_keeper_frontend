@@ -36,6 +36,9 @@ export default function collectionReducer(state = {collections: []}, action) {
             })
             return {...state, collections: collectionsThree}
 
+        case 'EDIT_PIECE':
+            
+
         default: 
             return state 
     }
