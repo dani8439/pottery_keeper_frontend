@@ -17,6 +17,10 @@ export default function collectionReducer(state = {collections: []}, action) {
 
         case 'DELETE_PIECE':
             // debugger;
+            // return {
+            //     ...state, 
+            //     collections: state.collections.filter(collection => collection.id !== action.payload)
+            // }
             let collectionsTwo = state.collections.map(collection => {
                 if (collection.id === action.payload.id) {
                     return action.payload
@@ -37,6 +41,14 @@ export default function collectionReducer(state = {collections: []}, action) {
             return {...state, collections: collectionsThree}
 
         case 'EDIT_PIECE':
+            let collectionsFour = state.collections.map(collection => {
+                if (collection.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return collection
+                }
+            })
+            return {...state, collections: collectionsFour}
             
 
         default: 
