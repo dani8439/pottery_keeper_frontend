@@ -33,8 +33,7 @@ class PiecesContainer extends React.Component {
             <div>
                 <PieceInput collection={this.props.collection}/>
                 <Pieces pieces={this.props.collection && this.props.collection.pieces}/>
-                {/* Conditional render if when button is clicked?  */}
-                <PieceEdit piece={this.props.collection && this.props.piece}/>
+                <PieceEdit />
             </div>
         )
     }
