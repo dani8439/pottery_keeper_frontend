@@ -19,7 +19,7 @@ export default function collectionReducer(state = {collections: []}, action) {
             // debugger;
             // return {
             //     ...state, 
-            //     collections: state.collections.filter(collection => collection.id !== action.payload)
+            //     collections: state.collections.filter(collection => collection.id === action.payload)
             // }
             let collectionsTwo = state.collections.map(collection => {
                 if (collection.id === action.payload.id) {
