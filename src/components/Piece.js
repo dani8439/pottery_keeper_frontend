@@ -9,8 +9,7 @@ const Piece = (props) => {
     return (
         <div>
 
-            {/* <h4>Edit Piece</h4>
-            <PieceEdit piece={piece} /> */}
+            <PieceEdit />
         </div>
     )
 
