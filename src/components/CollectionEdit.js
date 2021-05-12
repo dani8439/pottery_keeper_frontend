@@ -28,7 +28,7 @@ class CollectionEdit extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         let collection = {...this.state, id: this.props.collection.id}
-        console.log(collection)
+        // console.log(collection)
         this.props.editCollection(collection)
     }
 

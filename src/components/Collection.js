@@ -10,7 +10,7 @@ const Collection = (props) => {
 
     // router props and regular props to get to the id
     let collection = props.collections.filter(collection => collection.id == props.match.params.id)[0]
-    console.log(collection)
+    // console.log(collection)
 
     return (
         <div>

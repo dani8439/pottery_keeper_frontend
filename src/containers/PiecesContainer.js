@@ -12,6 +12,7 @@ class PiecesContainer extends React.Component {
     }
 
     handleEdit = (piece) => {
+        // console.log(piece)
         this.setState({
             pieceToBeEdited: piece
         })
@@ -19,12 +20,12 @@ class PiecesContainer extends React.Component {
 
 
     render() {
+        // pass in handleEdit so no circular loop. So we know which one to edit.
 
         return (
             <div>
                 <PieceInput collection={this.props.collection}/>
                 <Pieces pieces={this.props.collection && this.props.collection.pieces} onEdit={this.handleEdit}/>
-                {/* <Piece piece={this.props.piece}/> */}
                 <PieceEdit piece={this.state.pieceToBeEdited}/>
             </div>
         )
