@@ -16,7 +16,7 @@ const Collection = (props) => {
         <div>
             {/* {collection ? null : <Redirect to='/collections/' />} */}
             {collection ? <h2>{collection.name}</h2> : null}
-            {collection ? <img src={collection.main_image}/> : null}
+            {collection ? <img src={collection.main_image} alt="collection"/> : null}
             {/* {collection ? <p>{`${collection.pieces.length}`} pieces</p> : null} */}
 
             <h4>Edit Collection</h4>

@@ -51,7 +51,7 @@ const PieceEdit = ({piece}) => {
     }
 
 
-    return(
+    return (
             <div>
                 <h1>Edit Piece</h1>
                 <form onSubmit={handleSubmit}>

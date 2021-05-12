@@ -2,8 +2,8 @@ import React from 'react';
 import PieceInput from '../components/PieceInput'
 import Pieces from '../components/Pieces'
 import PieceEdit from '../components/PieceEdit'
-import Piece from '../components/Piece'
-import {connect} from 'react-redux'
+// import Piece from '../components/Piece'
+// import {connect} from 'react-redux'
 
 class PiecesContainer extends React.Component {
 
