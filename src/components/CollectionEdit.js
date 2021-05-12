@@ -11,6 +11,13 @@ class CollectionEdit extends React.Component {
         main_image: ''
     }
 
+    componentDidMount() {
+        this.setState({
+            name: this.props.collection?.name,
+            main_image: this.props.collection?.main_image
+        })
+    }
+
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
@@ -22,10 +29,10 @@ class CollectionEdit extends React.Component {
         event.preventDefault();
         let collection = {...this.state, id: this.props.collection.id}
         this.props.editCollection(collection)
-        this.setState({
-            name: '', 
-            main_image: ''
-        })
+        // this.setState({
+        //     name: '', 
+        //     main_image: ''
+        // })
     }
 
     render() {
