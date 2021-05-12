@@ -7,7 +7,7 @@ import Piece from './Piece';
 // functional component because sending down props through PieceInput. And just rendering out the pieces. 
 
 const Pieces = (props) => {
-    console.log(props.pieces)
+    // console.log(props.pieces)
 
 
     // because functional component, have to define with const keyword.
