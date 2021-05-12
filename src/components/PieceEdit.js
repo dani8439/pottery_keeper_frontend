@@ -32,7 +32,7 @@ const PieceEdit = ({piece}) => {
 
 
     const handleChange = (event) => {
-        console.log(event)
+        // console.log(event)
         event.preventDefault()
                 setState({
                     ...state,
@@ -43,8 +43,8 @@ const PieceEdit = ({piece}) => {
     
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log("I HAVE BEEN CALLED!")
-        console.log(state)
+        // console.log("I HAVE BEEN CALLED!")
+        // console.log(state)
         let newPiece = {...state, id: piece.id}
         dispatch(editPiece(newPiece))
 
