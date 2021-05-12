@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import {useDispatch} from 'react-redux';
-import {editPiece} from '../actions/editPiece'
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { editPiece } from '../actions/editPiece'
 
 const PieceEdit = ({piece}) => {
 

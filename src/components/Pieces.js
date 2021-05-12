@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {deletePiece} from '../actions/deletePiece';
-import {editPiece} from '../actions/editPiece';
+import { connect } from 'react-redux';
+import { deletePiece } from '../actions/deletePiece';
+import { editPiece } from '../actions/editPiece';
 // import Piece from './Piece';
 
 // functional component because sending down props through PieceInput. And just rendering out the pieces. 

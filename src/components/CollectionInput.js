@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {addCollection} from '../actions/addCollection'
+import { connect } from 'react-redux';
+import { addCollection } from '../actions/addCollection'
 
 class CollectionInput extends React.Component {
 
