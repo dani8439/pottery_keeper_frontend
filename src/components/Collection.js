@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router';
+// import {Redirect} from 'react-router';
 import PiecesContainer from '../containers/PiecesContainer';
 import CollectionEdit from './CollectionEdit'
 
