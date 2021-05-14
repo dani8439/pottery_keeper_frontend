@@ -49,9 +49,9 @@ class CollectionEdit extends React.Component {
 
 }
 
-const mapStateToProps = () => {
+// const mapStateToProps = () => {
 
-}
+// }
 
 // CollectionEdit.defaultProps = {
 //     collections: {}
