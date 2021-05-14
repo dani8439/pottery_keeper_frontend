@@ -7,7 +7,7 @@ class CollectionInput extends React.Component {
     // controlled form
 
     state = {
-        name: '', 
+        name: '',
         main_image: ''
     }
 
@@ -22,7 +22,7 @@ class CollectionInput extends React.Component {
         event.preventDefault();
         this.props.addCollection(this.state)
         this.setState({
-            name: '', 
+            name: '',
             main_image: ''
         })
     }
@@ -44,4 +44,4 @@ class CollectionInput extends React.Component {
 
 }
 
-export default connect(null, {addCollection})(CollectionInput)
+export default connect(null, { addCollection })(CollectionInput)
