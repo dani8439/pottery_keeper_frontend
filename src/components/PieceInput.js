@@ -1,9 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { addPiece } from '../actions/addPiece';
 
 
-// controlled form, store state. Class component 
+// controlled form, store state. Class component
 
 class PieceInput extends React.Component {
 
@@ -60,4 +60,4 @@ class PieceInput extends React.Component {
 
 }
 
-export default connect(null, {addPiece})(PieceInput); 
+export default connect(null, { addPiece })(PieceInput);

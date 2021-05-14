@@ -1,13 +1,13 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {editCollection} from '../actions/editCollection';
+import { connect } from 'react-redux';
+import { editCollection } from '../actions/editCollection';
 
 
 class CollectionEdit extends React.Component {
 
     // how to have state be existing data so it can all update and be switched?
     state = {
-        name: '', 
+        name: '',
         main_image: ''
     }
 
@@ -30,7 +30,7 @@ class CollectionEdit extends React.Component {
         let collection = {...this.state, id: this.props.collection.id}
         this.props.editCollection(collection)
         // this.setState({
-        //     name: '', 
+        //     name: '',
         //     main_image: ''
         // })
     }
@@ -56,4 +56,4 @@ class CollectionEdit extends React.Component {
 //     collections: {}
 // }
 
-export default connect(null, {editCollection})(CollectionEdit)
+export default connect(null, { editCollection })(CollectionEdit)

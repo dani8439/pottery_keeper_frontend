@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Route, Switch} from 'react-router-dom';
-import {fetchCollections} from '../actions/fetchCollections'
+import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import { fetchCollections } from '../actions/fetchCollections'
 import CollectionInput from '../components/CollectionInput'
 import Collections from '../components/Collections'
 import Collection from '../components/Collection'
@@ -36,4 +36,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {fetchCollections})(CollectionsContainer)
+export default connect(mapStateToProps, { fetchCollections })(CollectionsContainer)
