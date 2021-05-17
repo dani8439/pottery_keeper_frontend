@@ -40,13 +40,21 @@ export default function collectionReducer(state = {collections: []}, action) {
         case 'EDIT_PIECE':
             console.log('Edit Piece')
             console.log(action.payload)
-            return update(state, {
-                piece: {
-                    [action.id]: {
-                        piece:{$set: action.payload}
-                    }
+            let collectionEdit = state.collections.filter(collection => {
+                if (collection.id === action.payload.collection_id) {
+                    return update(state, {
+                        pieces: {
+                            [action.id]: {
+                                piece:{$set: action.payload}
+                            }
+                        }
+                    })
+                } else {
+                    return collection 
                 }
+
             })
+    
         
             // let collectionEdit = state.collections.filter(collection => {
             //     if (collection.id === action.payload.collection_id) {
