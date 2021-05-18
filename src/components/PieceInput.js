@@ -14,7 +14,7 @@ class PieceInput extends React.Component {
         pattern_name: '',
         quantity: '',
         image_url: '',
-        collection_id: ''
+        // put collection_id in here somewhere? It's being passed down to PieceInput as props from PieceContainer.
     }
 
     handleChange = (event) => {
@@ -61,5 +61,13 @@ class PieceInput extends React.Component {
     }
 
 }
+
+// const mapStateToProps = state => {
+//     const collectionId = state.collection.id
+//     return {
+//         // something about piece here. 
+//         collectionId
+//     }
+// }
 
 export default connect(null, { addPiece })(PieceInput);
