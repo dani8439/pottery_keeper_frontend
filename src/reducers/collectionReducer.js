@@ -1,4 +1,4 @@
-import update from 'immutability-helper'
+// import update from 'immutability-helper'
 
 export default function collectionReducer(state = {collections: []}, action) {
     // debugger;
@@ -42,44 +42,43 @@ export default function collectionReducer(state = {collections: []}, action) {
             console.log(action.payload)
             let collectionEdit = state.collections.filter(collection => {
                 if (collection.id === action.payload.collection_id) {
-                    return update(state, {
-                        pieces: {
-                            [action.id]: {
-                                piece:{$set: action.payload}
-                            }
-                        }
-                    })
-                } else {
-                    return collection 
-                }
-
+                    return collection
+                } 
             })
-    
-        
+            console.log(collectionEdit)
+            let newPieces = collectionEdit.pieces.map(piece => {
+                if (piece.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return piece
+                }
+                
+            })
+            collectionEdit.pieces = newPieces
+            let collectionsFour = state.collections.map(collection => {
+                if (collection.id === collectionEdit.id) {
+                    return collectionEdit
+                } else {
+                    return collection
+                }
+            })
+
+            return {...state, collections: collectionsFour}
+
             // let collectionEdit = state.collections.filter(collection => {
             //     if (collection.id === action.payload.collection_id) {
-            //         return collection
-            //     } 
-            // })
-            // console.log(collectionEdit)
-            // let newPieces = collectionEdit.pieces.map(piece => {
-            //     if (piece.id === action.payload.id) {
-            //         return action.payload
+            //         return update(...state, {
+            //             pieces: {
+            //                 [action.id]: {
+            //                     piece:{$set: action.payload}
+            //                 }
+            //             }
+            //         })
             //     } else {
-            //         return piece
+            //         return collection 
             //     }
-                
-            // })
-            // collectionEdit.pieces = newPieces
-            // let collectionsFour = state.collections.map(collection => {
-            //     if (collection.id === collectionEdit.id) {
-            //         return collectionEdit
-            //     } else {
-            //         return collection
-            //     }
-            // })
 
-            // return {...state, collections: collectionsFour}
+            // })
             
 
         default: 
