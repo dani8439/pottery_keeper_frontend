@@ -13,7 +13,8 @@ class PieceInput extends React.Component {
         piece_name: '',
         pattern_name: '',
         quantity: '',
-        image_url: ''
+        image_url: '',
+        collection_id: ''
     }
 
     handleChange = (event) => {
