@@ -1,7 +1,8 @@
 export const addPiece = (piece, collectionId) => {
+    debugger;
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/collections/${collectionId}/pieces`, {
+        fetch(`http://localhost:3000/api/v1/pieces`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

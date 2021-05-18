@@ -31,6 +31,7 @@ class PieceInput extends React.Component {
             pattern_name: '',
             quantity: '',
             image_url: ''
+            // collection_id: ''
         })
 
     }
