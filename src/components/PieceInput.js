@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addPiece } from '../actions/addPiece';
+// import { collection } from './Collection'
 
 
 // controlled form, store state. Class component
@@ -63,7 +64,8 @@ class PieceInput extends React.Component {
 }
 
 // const mapStateToProps = state => {
-//     const collectionId = state.collection.id
+//     const collectionId = state.collection_id
+//     // const collectionId = state.collection.id
 //     return {
 //         // something about piece here. 
 //         collectionId
@@ -71,3 +73,5 @@ class PieceInput extends React.Component {
 // }
 
 export default connect(null, { addPiece })(PieceInput);
+
+// export default connect(mapStateToProps, { addPiece })(PieceInput);
