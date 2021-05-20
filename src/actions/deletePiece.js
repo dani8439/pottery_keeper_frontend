@@ -1,7 +1,7 @@
 export const deletePiece = (pieceId, collectionId) => {
 
     return (dispatch) => {
-        return fetch(`http://localhost:3000/api/v1/collections/${collectionId}/pieces/${pieceId}`, {
+        return fetch(`http://localhost:3000/api/v1/pieces/${pieceId}`, {
             method: 'DELETE'
         })
         .then(resp => resp.json())
