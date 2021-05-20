@@ -15,10 +15,10 @@ const Pieces = (props) => {
     }
 
     // for when you submit edit form... move somewhere else...
-    const handleEdit = (piece) => {
-        console.log('clicked')
-        props.editPiece(piece, piece.collection_id)
-    }
+    // const handleEdit = (piece) => {
+    //     console.log('clicked')
+    //     props.editPiece(piece, piece.collection_id)
+    // }
 
 
     return (

@@ -35,10 +35,16 @@ class PieceEdit extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         let piece = {...this.state, id: this.props.piece.id}
-        console.log(this.state)
-        console.log(piece)
+        // console.log(this.state)
+        // console.log(piece)
         console.log(this.props.piece)
         this.props.editPiece(piece)
+        //    this.setState({
+        //     piece_name: '',
+        //     pattern_name: '',
+        //     quantity: '',
+        //     image_url: ''
+        // })
 
     }
 

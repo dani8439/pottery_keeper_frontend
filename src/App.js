@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 // import { fetchCollections } from './actions/fetchCollections'
 import CollectionsContainer from './containers/CollectionsContainer'
 import NavBar from './components/NavBar'
