@@ -29,8 +29,9 @@ const Pieces = (props) => {
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url} alt="pieces"/>
                 <br></br>
-                {/* <button onClick={() => props.onEdit(piece)}>Edit</button> */}
-                <button onClick={() => handleEdit(piece)}>Edit</button>
+                {/* <button onClick={() => console.log('Edit')}>Edit</button> */}
+                <button onClick={() => props.onEdit(piece)}>Edit</button>
+                {/* <button onClick={() => handleEdit(piece)}>Edit</button> */}
                 <button onClick={() => handleDelete(piece)}>Delete</button>
             </div>
             )}

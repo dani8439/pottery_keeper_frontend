@@ -21,7 +21,7 @@ class PiecesContainer extends React.Component {
         return (
             <div>
                 <PieceInput collection={this.props.collection}/>
-                <Pieces pieces={this.props.collection && this.props.collection.pieces}/>
+                <Pieces pieces={this.props.collection && this.props.collection.pieces} onEdit={this.handleEdit}/>
                 <PieceEdit piece={this.state.pieceToBeEdited} />
             </div>
         )
