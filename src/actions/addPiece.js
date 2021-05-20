@@ -1,5 +1,6 @@
 export const addPiece = (piece, collectionId) => {
     // debugger;
+    piece["collection_id"] = collectionId
 
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/pieces`, {
