@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addPiece } from '../actions/addPiece';
-// import { collection } from './Collection'
 
 
 // controlled form, store state. Class component
@@ -15,7 +14,6 @@ class PieceInput extends React.Component {
         pattern_name: '',
         quantity: '',
         image_url: '',
-        // put collection_id in here somewhere? It's being passed down to PieceInput as props from PieceContainer.
     }
 
     handleChange = (event) => {
@@ -33,7 +31,6 @@ class PieceInput extends React.Component {
             pattern_name: '',
             quantity: '',
             image_url: ''
-            // collection_id: ''
         })
 
     }
@@ -63,15 +60,6 @@ class PieceInput extends React.Component {
 
 }
 
-// const mapStateToProps = state => {
-//     const collectionId = state.collection_id
-//     // const collectionId = state.collection.id
-//     return {
-//         // something about piece here. 
-//         collectionId
-//     }
-// }
 
 export default connect(null, { addPiece })(PieceInput);
 
-// export default connect(mapStateToProps, { addPiece })(PieceInput);
