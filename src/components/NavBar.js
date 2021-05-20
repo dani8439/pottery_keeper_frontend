@@ -9,7 +9,7 @@ const NavBar = (props) => {
                 <ul className="right">
                     <li><NavLink to='/collections'>Collections</NavLink></li>
                     <li><NavLink to='/collections/new'>Add Collection</NavLink></li>
-                    <li><NavLink to='/'>Add Piece</NavLink></li>
+                    <li><NavLink to='/pieces/new'>Add Piece</NavLink></li>
                 </ul>
              
 
