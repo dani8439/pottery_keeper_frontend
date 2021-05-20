@@ -16,6 +16,7 @@ const Pieces = (props) => {
 
     // for when you submit edit form... move somewhere else...
     const handleEdit = (piece) => {
+        console.log('clicked')
         props.editPiece(piece, piece.collection_id)
     }
 
@@ -28,7 +29,8 @@ const Pieces = (props) => {
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url} alt="pieces"/>
                 <br></br>
-                <button onClick={() => props.onEdit(piece)}>Edit</button>
+                {/* <button onClick={() => props.onEdit(piece)}>Edit</button> */}
+                <button onClick={() => handleEdit(piece)}>Edit</button>
                 <button onClick={() => handleDelete(piece)}>Delete</button>
             </div>
             )}
