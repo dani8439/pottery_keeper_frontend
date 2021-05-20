@@ -36,6 +36,16 @@ export default function collectionReducer(state = {collections: []}, action) {
             })
             return {...state, collections: collectionsThree}
 
+        case 'EDIT_PIECE': 
+            let collectionsFour = state.collections.map(collection => {
+                if (collection.id === action.payload.id) {
+                    return action.payload 
+                } else {
+                    return collection
+                }
+            })
+            return {...state, collections: collectionsFour}
+
         // edit a piece same logic as above. / edit_collection/ add_piece all same logic can probably be switched. 
         
 

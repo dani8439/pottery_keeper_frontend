@@ -5,7 +5,7 @@ import Collection from './Collection';
 // functional component. Just iterating and displaying collection info.
 
 const Collections = (props) => {
-    console.log(props)
+    // console.log(props)
 
     return (
         <div>

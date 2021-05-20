@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deletePiece } from '../actions/deletePiece';
+import { editPiece } from '../actions/editPiece';
 
 // functional component because sending down props through PieceInput. And just rendering out the pieces.
 
@@ -13,6 +14,12 @@ const Pieces = (props) => {
         props.deletePiece(piece.id, piece.collection_id)
     }
 
+    // for when you submit edit form... move somewhere else...
+    // const handleEdit = (piece) => {
+    //     console.log('clicked')
+    //     props.editPiece(piece, piece.collection_id)
+    // }
+
 
     return (
         // {/* Add in check because first time props come through, it's undefined. With react, when you refresh page, state and store are cleared out.*/}
@@ -22,6 +29,9 @@ const Pieces = (props) => {
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url} alt="pieces"/>
                 <br></br>
+                {/* <button onClick={() => console.log('Edit')}>Edit</button> */}
+                <button onClick={() => props.onEdit(piece)}>Edit</button>
+                {/* <button onClick={() => handleEdit(piece)}>Edit</button> */}
                 <button onClick={() => handleDelete(piece)}>Delete</button>
             </div>
             )}
@@ -29,4 +39,4 @@ const Pieces = (props) => {
     )
 }
 
-export default connect(null, { deletePiece })(Pieces)
+export default connect(null, { deletePiece, editPiece })(Pieces)
