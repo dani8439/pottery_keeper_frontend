@@ -1,9 +1,5 @@
 export const addPiece = (piece, collectionId) => {
-<<<<<<< HEAD
-    // debugger; 
-=======
     // debugger;
->>>>>>> ef3e2c0a44554db094db2170322ed6c69ee360dc
     piece["collection_id"] = collectionId
 
     return (dispatch) => {
