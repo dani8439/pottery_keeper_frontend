@@ -39,12 +39,6 @@ class PieceEdit extends React.Component {
         // console.log(piece)
         console.log(this.props.piece)
         this.props.editPiece(piece)
-        //    this.setState({
-        //     piece_name: '',
-        //     pattern_name: '',
-        //     quantity: '',
-        //     image_url: ''
-        // })
 
     }
 
