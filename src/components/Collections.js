@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import Collection from './Collection';
+// import Collection from './Collection';
 
 // functional component. Just iterating and displaying collection info.
 

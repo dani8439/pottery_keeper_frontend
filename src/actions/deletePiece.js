@@ -1,4 +1,5 @@
-export const deletePiece = (pieceId, collectionId) => {
+export const deletePiece = (pieceId) => {
+// export const deletePiece = (pieceId, collectionId) => {
 
     return (dispatch) => {
         return fetch(`http://localhost:3000/api/v1/pieces/${pieceId}`, {
