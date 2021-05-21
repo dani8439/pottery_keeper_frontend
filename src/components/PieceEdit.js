@@ -39,7 +39,7 @@ class PieceEdit extends React.Component {
         // console.log(piece)
         console.log(this.props.piece)
         this.props.editPiece(piece)
-        // this.resetForm()
+        this.resetForm()
         // this.setState({
         //     collection_id: '',
         //     piece_name: '',
@@ -50,15 +50,12 @@ class PieceEdit extends React.Component {
 
     }
 
-    // resetForm = () => {
-    //     this.setState({
-    //         collection_id: '',
-    //         piece_name: '',
-    //         pattern_name: '',
-    //         quantity: '',
-    //         image_url: ''
-    //     })
-    // }
+    resetForm = () => {
+        console.log("I've been cleared!")
+        this.setState({
+            inputs: {}
+        })
+    }
 
     render() {
         return (
@@ -77,7 +74,7 @@ class PieceEdit extends React.Component {
                     <label>Quantity:</label>
                     <input type="text" placeholder="Quantity" name="quantity" defaultValue={this.props.piece?.quantity} onChange={this.handleChange}/><br></br>
                     <br></br>
-                    <input type="submit"></input>
+                    <input type="submit" value="Edit Piece"></input>
 
                 </form>
             </div>

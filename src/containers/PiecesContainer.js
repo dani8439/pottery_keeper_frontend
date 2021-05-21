@@ -11,6 +11,7 @@ class PiecesContainer extends React.Component {
 
     handleEdit = (piece) => {
         // console.log(piece)
+        console.log("Piece I'm editing!")
         this.setState({
             pieceToBeEdited: piece
         })
