@@ -44,10 +44,7 @@ export default function collectionReducer(state = {collections: []}, action) {
                     return collection
                 }
             })
-            return {...state, collections: collectionsFour}
-
-        // edit a piece same logic as above. / edit_collection/ add_piece all same logic can probably be switched. 
-        
+            return {...state, collections: collectionsFour}        
 
         default: 
             return state 
