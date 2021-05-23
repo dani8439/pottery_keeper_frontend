@@ -25,6 +25,9 @@ class PiecesContainer extends React.Component {
 
     render() {
         // pass in handleEdit so no circular loops. So we know which one to edit.
+        // create a conditional render. If there is no pieceToBeEdited, we render the newPiece form. 
+        // if not, we render the edit form, as well as pass down the props of the piece that will be edited, and the hideEdit function 
+        // that will toggle pieceToBeEdited to null, and switch once onSave event fires in the child component, in the handleSubmit Event. 
         return (
             <div>
                 {
@@ -37,21 +40,6 @@ class PiecesContainer extends React.Component {
 
             </div>
         )
-
-        // if (this.state.pieceToBeEdited){
-        //     return (
-        //         <div>
-        //             <h1>Edit Piece</h1>
-        //             <PieceEdit piece={this.state.pieceToBeEdited} />
-        //         </div>
-        //     )
-        // }
-        // return (
-        //     <div>
-        //         <PieceInput collection={this.props.collection}/>
-        //         <Pieces pieces={this.props.collection && this.props.collection.pieces} onEdit={this.handleEdit}/>
-        //     </div>
-        // )
     }
 
 }
