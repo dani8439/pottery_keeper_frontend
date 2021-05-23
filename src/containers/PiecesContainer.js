@@ -18,11 +18,18 @@ class PiecesContainer extends React.Component {
 
     render() {
         // pass in handleEdit so no circular loops. So we know which one to edit.
+        if (this.state.pieceToBeEdited){
+            return (
+                <div>
+                    <h1>Edit Piece</h1>
+                    <PieceEdit piece={this.state.pieceToBeEdited} />
+                </div>
+            )
+        }
         return (
             <div>
                 <PieceInput collection={this.props.collection}/>
                 <Pieces pieces={this.props.collection && this.props.collection.pieces} onEdit={this.handleEdit}/>
-                <PieceEdit piece={this.state.pieceToBeEdited} />
             </div>
         )
     }

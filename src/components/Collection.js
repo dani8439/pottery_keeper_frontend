@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Redirect} from 'react-router';
 import PiecesContainer from '../containers/PiecesContainer';
 import CollectionEdit from './CollectionEdit'
 
@@ -15,7 +14,6 @@ const Collection = (props) => {
 
     return (
         <div>
-            {/* {collection ? null : <Redirect to='/collections/' />} */}
             {collection ? <h2>{collection.name}</h2> : null}
             {collection ? <img src={collection.main_image} alt="pottery"/> : null}
 
