@@ -16,13 +16,22 @@ class PiecesContainer extends React.Component {
         })
     }
 
+    hideEdit = () => {
+        console.log("hide Me")
+        this.setState({
+            pieceToBeEdited: null
+        })
+    }
+
     render() {
         // pass in handleEdit so no circular loops. So we know which one to edit.
         return (
             <div>
-                <PieceInput collection={this.props.collection}/>
                 {
-                    this.state.pieceToBeEdited && <PieceEdit piece={this.state.pieceToBeEdited} />
+                    !this.state.pieceToBeEdited && <PieceInput collection={this.props.collection}/>
+                }
+                {
+                    this.state.pieceToBeEdited && <PieceEdit piece={this.state.pieceToBeEdited} onSave={this.hideEdit} />
                 }
                 <Pieces pieces={this.props.collection && this.props.collection.pieces} onEdit={this.handleEdit} />
 

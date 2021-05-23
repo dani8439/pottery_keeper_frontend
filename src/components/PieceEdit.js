@@ -39,22 +39,15 @@ class PieceEdit extends React.Component {
         // console.log(piece)
         console.log(this.props.piece)
         this.props.editPiece(piece)
-        this.handleReset();
+        this.props.onSave();
 
     }
 
-    handleReset = () => {
-        Array.from(document.querySelectorAll('input')).forEach(
-            input => (input.value = "")
-        );
-        this.setState({
-            itemvalues: [{}]
-        })
-    }
 
     render() {
         return (
             <div>
+                <h2>Edit Piece</h2>
                 <form onSubmit={this.handleSubmit}>
                 <label>Piece Name:</label>
                     <input type="text" placeholder="Piece Name" name="piece_name" defaultValue={this.props.piece?.piece_name} onChange={this.handleChange}/><br></br>
