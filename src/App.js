@@ -1,6 +1,9 @@
 import React from 'react';
 import CollectionsContainer from './containers/CollectionsContainer'
 import NavBar from './components/NavBar'
+import './App.css';
+
+
 
 class App extends React.Component {
 
