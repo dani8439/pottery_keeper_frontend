@@ -10,7 +10,6 @@ class AddPiece extends React.Component {
         pattern_name: '',
         quantity: '',
         image_url: '',
-        collection_id: ''
         
     }
 
@@ -26,15 +25,14 @@ class AddPiece extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.props.collections.collection.id)
-        // this.props.addPiece(this.state, this.props.collections.collection.id)
-        // this.setState({
-        //     piece_name: '',
-        //     pattern_name: '',
-        //     quantity: '',
-        //     image_url: '',
-        //     collection_id: ''
-        // })
+        console.log(this.state)
+        this.props.addPiece(this.state, this.props.collection)
+        this.setState({
+            piece_name: '',
+            pattern_name: '',
+            quantity: '',
+            image_url: '',
+        })
 
     }
 
@@ -57,8 +55,8 @@ class AddPiece extends React.Component {
                     <br></br>
                     <label>Collection:</label>
                     {/* not capturing collection_id, all of this is wrong */}
-                    <select placeholder="Collection" name="collection"  value={this.state.collection_id} onChange={this.handleChange}>
-                        {this.props.collections.map(collection => <option key={collection.id}>{collection.name}</option>)}  
+                    <select placeholder="Collection" name="collection" onChange={this.handleChange}>
+                        {this.props.collections.map(collection => <option key={collection.id} collection_id={collection.id} value={this.state.collection_id}>{collection.name}</option>)}  
                     </select><br></br>
                     <br></br>
                     <input type="submit" ></input>
@@ -67,6 +65,12 @@ class AddPiece extends React.Component {
         )
     }
 }
+
+// const mapStateToProps = state => {
+//     return {
+//         collectionId: state.collection
+//     }
+// }
 
 // {props.collections.map(collection =>
 //     <div key={collection.id}>
