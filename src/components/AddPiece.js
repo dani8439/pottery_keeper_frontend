@@ -26,15 +26,15 @@ class AddPiece extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.props.collections)
-        this.props.addPiece(this.state, this.props.collection.id)
-        this.setState({
-            piece_name: '',
-            pattern_name: '',
-            quantity: '',
-            image_url: '',
-            collection_id: ''
-        })
+        console.log(this.props.collections.collection.id)
+        // this.props.addPiece(this.state, this.props.collections.collection.id)
+        // this.setState({
+        //     piece_name: '',
+        //     pattern_name: '',
+        //     quantity: '',
+        //     image_url: '',
+        //     collection_id: ''
+        // })
 
     }
 
@@ -56,7 +56,8 @@ class AddPiece extends React.Component {
                     <input type="text" placeholder="Quantity" name="quantity" value={this.state.quantity} onChange={this.handleChange}/><br></br>
                     <br></br>
                     <label>Collection:</label>
-                    <select placeholder="Collection" name="collection_id" value={this.state.collection_id} onChange={this.handleChange}>
+                    {/* not capturing collection_id, all of this is wrong */}
+                    <select placeholder="Collection" name="collection"  value={this.state.collection_id} onChange={this.handleChange}>
                         {this.props.collections.map(collection => <option key={collection.id}>{collection.name}</option>)}  
                     </select><br></br>
                     <br></br>
