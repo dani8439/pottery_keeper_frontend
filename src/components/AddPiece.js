@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addPiece } from '../actions/addPiece';
+import Collections from './Collections';
 
 class AddPiece extends React.Component {
 
@@ -25,6 +26,7 @@ class AddPiece extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        console.log(this.props.collections)
         this.props.addPiece(this.state, this.props.collection.id)
         this.setState({
             piece_name: '',
@@ -55,10 +57,7 @@ class AddPiece extends React.Component {
                     <br></br>
                     <label>Collection:</label>
                     <select placeholder="Collection" name="collection_id" value={this.state.collection_id} onChange={this.handleChange}>
-                        <option>Love & Kisses</option>
-                        <option>My Pieces</option>
-                        <option>Wish List</option>
-                        <option>Dana's Collection</option>
+                        {this.props.collections.map(collection => <option key={collection.id}>{collection.name}</option>)}  
                     </select><br></br>
                     <br></br>
                     <input type="submit" ></input>
