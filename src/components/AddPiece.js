@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addPiece } from '../actions/addPiece';
-import Collections from './Collections';
 
 class AddPiece extends React.Component {
 
@@ -9,7 +8,7 @@ class AddPiece extends React.Component {
         piece_name: '',
         pattern_name: '',
         quantity: '',
-        image_url: '',
+        image_url: ''
         
     }
 
@@ -26,12 +25,12 @@ class AddPiece extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log(this.state)
-        this.props.addPiece(this.state, this.props.collection)
+        this.props.addPiece(this.state, this.props.collections.id)
         this.setState({
             piece_name: '',
             pattern_name: '',
             quantity: '',
-            image_url: '',
+            image_url: ''
         })
 
     }
@@ -55,8 +54,8 @@ class AddPiece extends React.Component {
                     <br></br>
                     <label>Collection:</label>
                     {/* not capturing collection_id, all of this is wrong */}
-                    <select placeholder="Collection" name="collection" onChange={this.handleChange}>
-                        {this.props.collections.map(collection => <option key={collection.id} collection_id={collection.id} value={this.state.collection_id}>{collection.name}</option>)}  
+                    <select placeholder="Collection" name="collection_id"  value={this.state.collection_id} onChange={this.handleChange}>
+                        {this.props.collections.map(collection => <option key={collection.id}>{collection.id}</option>)}  
                     </select><br></br>
                     <br></br>
                     <input type="submit" ></input>
