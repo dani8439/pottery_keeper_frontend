@@ -49,10 +49,6 @@ img {
     width: 400px
 }
 
-.font-link {
-    font-family: 'Frank Ruhle Libre', serif;
-}
-
 .topnav {
     background-color: #FAF3F3;
     overflow: hidden;
@@ -76,10 +72,3 @@ img {
     color: #F36545;
   }
 
-
-
-/* h1 {
-    text-align: center;
-    color: #010101;
-    font-family: 'Frank Ruhl Libre', serif;
-} */
