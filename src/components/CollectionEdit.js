@@ -43,7 +43,8 @@ class CollectionEdit extends React.Component {
                     <br></br>
                     <label>Edit Image:</label>
                     <input type="text" name="main_image" onChange={this.handleChange} defaultValue={this.props.collection?.main_image}/><br></br>
-                    <input type="submit"/>
+                    <br></br>
+                    <input type="submit" value="Update Collection"/>
                 </form>
             </div>
         )

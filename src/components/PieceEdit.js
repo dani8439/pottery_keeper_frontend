@@ -61,7 +61,7 @@ class PieceEdit extends React.Component {
                     <label>Quantity:</label>
                     <input type="text" placeholder="Quantity" name="quantity" defaultValue={this.props.piece?.quantity} onChange={this.handleChange}/><br></br>
                     <br></br>
-                    <input type="submit"></input>
+                    <input type="submit" value="Edit This Piece"></input>
 
                 </form>
             </div>

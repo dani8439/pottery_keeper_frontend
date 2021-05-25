@@ -43,6 +43,14 @@ body {
     font-family: 'Frank Ruhl Libre', serif;
   }
 
+  button {
+    font-size: 14px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+
+  /* button a:hover {
+    color: #F36545
+  } */
 
 img {
     height: 400px;
