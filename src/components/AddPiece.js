@@ -9,6 +9,7 @@ class AddPiece extends React.Component {
         pattern_name: '',
         quantity: '',
         image_url: ''
+        // collection_id: ''
         
     }
 
@@ -31,6 +32,7 @@ class AddPiece extends React.Component {
             pattern_name: '',
             quantity: '',
             image_url: ''
+            // collection_id: ''
         })
 
     }
@@ -55,7 +57,7 @@ class AddPiece extends React.Component {
                     <label>Collection:</label>
                     {/* not capturing collection_id, all of this is wrong */}
                     <select placeholder="Collection" name="collection_id"  value={this.state.collection_id} onChange={this.handleChange}>
-                        {this.props.collections.map(collection => <option key={collection.id}>{collection.id}</option>)}  
+                        {this.props.collections.map(collection => <option key={collection.id}>{collection.name}</option>)}  
                     </select><br></br>
                     <br></br>
                     <input type="submit" ></input>
