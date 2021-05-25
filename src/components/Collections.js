@@ -11,7 +11,8 @@ const Collections = (props) => {
             <h3>Your Collections</h3>
             {props.collections.map(collection =>
                 <div key={collection.id}>
-                    <Link to={`/collections/${collection.id}`}>{collection.name}</Link>
+                    <Link to={`/collections/${collection.id}`}>{collection.name}<br></br><img src={collection.main_image} alt=""/></Link><br></br><br></br>
+                    
                 </div>)}
 
 
