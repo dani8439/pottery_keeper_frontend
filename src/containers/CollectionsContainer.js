@@ -17,7 +17,7 @@ class CollectionsContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="body">
                 {/* <NavBar />  */}
                 <Switch>
                     <Route path='/collections/new' component={CollectionInput}/>

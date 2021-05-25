@@ -1,4 +1,85 @@
+/* Text/formatting */
+body {
+    background-color: #FFFFFF;
+  }
+  
+  header,
+  h1 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  h4 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  li {
+    font-size: 18px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  form {
+    font-size: 16px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  
+  input {
+    font-size: 14px;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+
+
 img {
     height: 400px;
     width: 400px
 }
+
+.font-link {
+    font-family: 'Frank Ruhle Libre', serif;
+}
+
+.topnav {
+    background-color: #FAF3F3;
+    overflow: hidden;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    color: #F36545;
+  }
+  
+  .topnav a.active {
+    color: #F36545;
+  }
+
+
+
+/* h1 {
+    text-align: center;
+    color: #010101;
+    font-family: 'Frank Ruhl Libre', serif;
+} */
