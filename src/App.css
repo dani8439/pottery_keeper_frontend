@@ -46,36 +46,39 @@ body {
   button {
     /* position: relative; */
     font-size: 14px;
-    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Merriweather Sans', sans-serif;
     background-color: #F36545;
-    color:#FAF3F3
+    color:#FAF3F3;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 5px;
     /* justify-self: center; */
   }
 
-  /* button:hover {
-    background-color: #d8d5d5;
-    color: #F36545;
-    border-radius: 3px;
-  } */
-
-img {
-    height: 400px;
-    width: 400px;
-}
-
-.topnav {
+  button:hover {
     background-color: #FAF3F3;
-    overflow: hidden;
+    color: #F36545;
   }
+
+  img {
+      height: 375px;
+      width: 375px;
+  }
+
+  .topnav {
+      background-color: #FAF3F3;
+      overflow: hidden;
+    }
 
   .topnav a {
     float: left;
     display: block;
     color: #000000;
     text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
   }
   
   .topnav a:hover, .dropdown:hover .dropbtn {
@@ -84,5 +87,16 @@ img {
   
   .topnav a.active {
     color: #F36545;
+  }
+
+  /* card display */
+
+  .card {
+    text-align: center;
+    padding: 1rem;
+    width: 23rem;
+    height: 40rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
   }
 

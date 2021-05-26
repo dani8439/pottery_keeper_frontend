@@ -5,10 +5,10 @@ const NavBar = (props) => {
     return (
         <nav className="topnav">
             <div className="container">
-                <Link to='/'>Home</Link>
-                <NavLink to='/collections'>Collections</NavLink>
-                <NavLink to='/collections/new'>Add Collection</NavLink>
-                <NavLink to='/pieces/new'>Add Piece</NavLink>
+                <Link to='/'>HOME</Link>
+                <NavLink to='/collections'>COLLECTIONS</NavLink>
+                <NavLink to='/collections/new'>ADD COLLECTION</NavLink>
+                <NavLink to='/pieces/new'>ADD PIECE</NavLink>
             
              
 
