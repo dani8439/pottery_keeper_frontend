@@ -3,7 +3,8 @@ import React from 'react';
 const Footer = (props) => {
     return (
         <div className="footer">
-            <h1>Inside Footer</h1>
+            <p>Pottery Keeper: Helping to Keep Your Collecting Organized.</p>
+            <a href="https://www.ebay.co.uk/sch/i.html?_from=R40&_nkw=emma+bridgewater&_sacat=0&_sop=10">Oopsies</a>
 
         </div>
     )

@@ -8,7 +8,6 @@ const Collection = (props) => {
     
 
     // router props and regular props to get to the id
-    // possible this is throwing an error?
     let collection = props.collections.filter(collection => collection.id == props.match.params.id)[0]
     // console.log(collection)
 
