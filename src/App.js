@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <h1>Welcome to Pottery Keeper!</h1>
+        <h1>Pottery Keeper</h1>
         <CollectionsContainer />
       </div>
     );
