@@ -36,7 +36,7 @@ class CollectionEdit extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="edit-collection-card">
                 <form onSubmit={this.handleSubmit}>
                     <label>Edit Name:</label>
                     <input type="text" name="name" onChange={this.handleChange} defaultValue={this.props.collection?.name}/><br></br>

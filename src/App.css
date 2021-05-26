@@ -100,3 +100,26 @@ body {
     margin: 1rem 2rem;
   }
 
+  .collection-card {
+    text-align: center;
+    padding: 1rem;
+    width: 23 rem;
+    height: 23 rem;
+    display: inline-grid;
+    margin: 1rem 2rem
+
+  }
+
+  .edit-card {
+    background-color: #EAE1DD;
+    text-align: center;
+    padding: 30px;
+    margin: 1rem;
+
+  }
+
+  .edit-collection-card {
+    text-align: center;
+    
+  }
+

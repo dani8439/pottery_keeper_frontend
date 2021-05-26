@@ -46,8 +46,8 @@ class PieceEdit extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Edit Piece</h2>
+            <div className="edit-card"> 
+                <h1>Edit Piece</h1>
                 <form onSubmit={this.handleSubmit}>
                 <label>Piece Name:</label>
                     <input type="text" placeholder="Piece Name" name="piece_name" defaultValue={this.props.piece?.piece_name} onChange={this.handleChange}/><br></br>
@@ -62,7 +62,6 @@ class PieceEdit extends React.Component {
                     <input type="text" placeholder="Quantity" name="quantity" defaultValue={this.props.piece?.quantity} onChange={this.handleChange}/><br></br>
                     <br></br>
                     <input type="submit" value="Edit This Piece"></input>
-
                 </form>
             </div>
 

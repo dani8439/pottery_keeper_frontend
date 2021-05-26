@@ -10,7 +10,7 @@ const Collections = (props) => {
         <div>
             <h3>Your Collections</h3>
             {props.collections.map(collection =>
-                <div key={collection.id}>
+                <div key={collection.id} className="collection-card">
                     <Link to={`/collections/${collection.id}`}>{collection.name}<br></br><img src={collection.main_image} alt=""/></Link><br></br><br></br>
                     
                 </div>)}
