@@ -110,6 +110,11 @@ body {
 
   }
 
+  .collection {
+    text-align: center;
+
+  }
+
   .edit-card {
     background-color: #EAE1DD;
     text-align: center;

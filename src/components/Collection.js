@@ -13,15 +13,19 @@ const Collection = (props) => {
     // console.log(collection)
 
     return (
-        <div>
-            {collection ? <h2>{collection.name}</h2> : null}
-            {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
+        <React.Fragment>
+            <div className="collection">
+                {collection ? <h2>{collection.name}</h2> : null}
+                {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
 
-            <CollectionEdit collection={collection}/>
-            <PiecesContainer collection={collection}/>
+            </div>
+            <div>
+                <CollectionEdit collection={collection}/>
+                <PiecesContainer collection={collection}/>
+            </div>
             
             
-        </div>
+        </React.Fragment>
     )
 
 }
