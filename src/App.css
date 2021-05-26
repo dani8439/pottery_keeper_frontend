@@ -44,12 +44,18 @@ body {
   }
 
   button {
+    /* position: relative; */
     font-size: 14px;
     font-family: 'Frank Ruhl Libre', serif;
+    background-color: #F36545;
+    color:#FAF3F3
+    /* justify-self: center; */
   }
 
-  /* button a:hover {
-    color: #F36545
+  /* button:hover {
+    background-color: #d8d5d5;
+    color: #F36545;
+    border-radius: 3px;
   } */
 
 img {
