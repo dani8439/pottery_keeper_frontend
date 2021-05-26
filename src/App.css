@@ -120,6 +120,14 @@ body {
 
   .edit-collection-card {
     text-align: center;
-    
+
+  }
+
+  .new-piece-card {
+    text-align: center;
+  }
+
+  .new-collection-card {
+    text-align: center;
   }
 

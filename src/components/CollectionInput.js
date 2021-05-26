@@ -29,13 +29,15 @@ class CollectionInput extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="new-collection-card">
+                <h2>Create Collection</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>Collection Name:</label>
                     <input type="text" placeholder="Name" name="name" onChange={this.handleChange} value={this.state.name}/><br></br>
                     <br></br>
                     <label>Main Image:</label>
                     <input type="text" placeholder="Main Image" name="main_image" onChange={this.handleChange} value={this.state.main_image}/><br></br>
+                    <br></br>
                     <input type="submit"/>
                 </form>
             </div>
