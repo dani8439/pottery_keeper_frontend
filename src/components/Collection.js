@@ -5,6 +5,12 @@ import CollectionEdit from './CollectionEdit'
 // functional component. Not updating state... 
 
 const Collection = (props) => {
+
+    // const isEditing = props.isEditing;
+
+    // const handleEditClick = () => {
+    //     props.isEditing({isEditing: true});
+    // }  
     
 
     // router props and regular props to get to the id
@@ -16,12 +22,18 @@ const Collection = (props) => {
             <div className="collection">
                 {collection ? <h2>{collection.name}</h2> : null}
                 {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
+                <br></br>
+                {/* <button onClick={() => props.handleEditClick()}>EDIT</button> */}
+                {/* <button onClick={() => console.log("Clicked!")}>EDIT</button> */}
 
             </div>
+            {/* conditional statement to render collection edit?  */}
             <div>
-                <CollectionEdit collection={collection}/>
+                <CollectionEdit collection={collection} isEditing={true}/>
                 <PiecesContainer collection={collection}/>
             </div>
+                
+            
             
             
         </React.Fragment>
