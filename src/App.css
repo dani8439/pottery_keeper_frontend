@@ -137,6 +137,11 @@ body {
     text-align: center;
   }
 
+  /* .homepage {
+    position: relative;
+    background-image: url(/src/images/screenshot.jpg);
+  } */
+
 
   /* Footer */
   .footer {
