@@ -6,7 +6,7 @@ import CollectionEdit from './CollectionEdit'
 
 const Collection = (props) => {
 
-    // const isEditing = props.isEditing;
+    const collectionEdit = props.collectionEdit
 
     // const handleEditClick = () => {
     //     props.isEditing({isEditing: true});
@@ -24,12 +24,14 @@ const Collection = (props) => {
                 {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
                 <br></br>
                 {/* <button onClick={() => props.handleEditClick()}>EDIT</button> */}
-                {/* <button onClick={() => console.log("Clicked!")}>EDIT</button> */}
+                <button onClick={() => console.log("Clicked!")}>EDIT</button>
 
             </div>
             {/* conditional statement to render collection edit?  */}
             <div>
-                <CollectionEdit collection={collection} isEditing={true}/>
+                {/* if (collectionEdit) {
+                    return <CollectionEdit collection={collection} isEditing={true}/>
+                } */}
                 <PiecesContainer collection={collection}/>
             </div>
                 

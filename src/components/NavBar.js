@@ -8,7 +8,7 @@ const NavBar = (props) => {
                 <Link to='/'>HOME</Link>
                 <NavLink to='/collections'>COLLECTIONS</NavLink>
                 <NavLink to='/collections/new'>ADD COLLECTION</NavLink>
-                <NavLink to='/pieces/new'>ADD PIECE</NavLink>
+                {/* <NavLink to='/pieces/new'>ADD PIECE</NavLink> */}
             
              
 
