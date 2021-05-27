@@ -23,14 +23,14 @@ const Collection = (props) => {
                 {collection ? <h2>{collection.name}</h2> : null}
                 {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
                 <br></br>
-                <button onClick={() => this.handleEditClick(collection)}>EDIT</button>
-                {/* <button onClick={() => console.log("Clicked!")}>EDIT</button> */}
+                {/* <button onClick={() => this.handleEditClick(collection)}>EDIT</button> */}
+                <button onClick={() => console.log("Clicked!")}>EDIT</button>
 
             </div>
             <div>
                 
                 { isEditing && <CollectionEdit collection={collection}/>}
-                
+                <CollectionEdit collection={collection}/>
                 <PiecesContainer collection={collection}/>
             </div>
                 
