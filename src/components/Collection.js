@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PiecesContainer from '../containers/PiecesContainer';
 import CollectionEdit from './CollectionEdit'
 
@@ -6,10 +6,11 @@ import CollectionEdit from './CollectionEdit'
 
 const Collection = (props) => {
 
-    const isEditing = props.isEditing;
+    const [isEditing, setIsEditing] = useState(false)
 
     const handleEditClick = () => {
-        props.isEditing({isEditing: true})
+        // setIsEditing(true) -- would always show the edit Form.
+        setIsEditing(!isEditing)
     }  
     
 
@@ -23,14 +24,13 @@ const Collection = (props) => {
                 {collection ? <h2>{collection.name}</h2> : null}
                 {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
                 <br></br>
-                {/* <button onClick={() => this.handleEditClick(collection)}>EDIT</button> */}
-                <button onClick={() => console.log("Clicked!")}>EDIT</button>
+                <button onClick={() => handleEditClick(collection)}>EDIT</button>
+                {/* <button onClick={() => console.log("Clicked!")}>EDIT</button> */}
 
             </div>
             <div>
                 
                 { isEditing && <CollectionEdit collection={collection}/>}
-                <CollectionEdit collection={collection}/>
                 <PiecesContainer collection={collection}/>
             </div>
                 

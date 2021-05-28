@@ -5,7 +5,7 @@ const Homepage = (props) => {
         <div className="homepage">
             <img src="../images/screenshot.jpg"/>
         </div>
-    )
+    ) 
     
 }
 
