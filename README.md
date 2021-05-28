@@ -1,3 +1,4 @@
+
 # Pottery Keeper
 A Rails API, and React App allowing a user to create a detailed database of pottery pieces. A user may create collections, edit collections, add pieces to collections, edit, and delete pieces in collections. 
 
@@ -9,3 +10,5 @@ Follow the instructions on how to set up and run the backend. Once the backend i
 
 1. CD into `pottery_keeper_frontend`.
 2. Run `npm start` and Y when prompted to open the react app on another port. 
+
+<img width="1009" alt="Screen Shot 2021-05-28 at 2 01 45 PM" src="https://user-images.githubusercontent.com/26771302/120026009-7656f080-bfbf-11eb-896d-ffa56dfeac53.png">
