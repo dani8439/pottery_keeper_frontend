@@ -76,7 +76,7 @@
     color: #000000;
     text-align: center;
     font-family: 'Merriweather Sans', sans-serif;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
     font-size: 14px;
   }
@@ -98,10 +98,6 @@
     height: 40rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    /* img: {
-      height: 375px;
-      width: 375px;
-    } */
   }
 
   .collection-card {
@@ -143,8 +139,7 @@
 
   .homepage {
     text-align: center;
-    max-width:100% !important;
-    height:auto !important;
+    background-color: #F9F8F7;
   }
 
 
