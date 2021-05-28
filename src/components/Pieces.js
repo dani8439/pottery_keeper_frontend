@@ -19,12 +19,12 @@ const Pieces = (props) => {
         // {/* Add in check because first time props come through, it's undefined. With react, when you refresh page, state and store are cleared out.*/}
         <div>
             {props.pieces && props.pieces.map(piece =>
-            <div key={piece.id}>
+            <div className="card" key={piece.id}>
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
-                <img src={piece.image_url} alt="pieces"/>
+                <img src={piece.image_url} alt="pieces" height="375px" width="375px"/>
                 <br></br>
-                <button onClick={() => props.onEdit(piece)}>Edit</button>
-                <button onClick={() => handleDelete(piece)}>Delete</button>
+                <button onClick={() => props.onEdit(piece)}>EDIT</button>
+                <button onClick={() => handleDelete(piece)}>DELETE</button>
             </div>
             )}
         </div>

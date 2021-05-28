@@ -28,22 +28,23 @@ class CollectionEdit extends React.Component {
         event.preventDefault();
         let collection = {...this.state, id: this.props.collection.id}
         this.props.editCollection(collection)
-        // this.setState({
-        //     name: '',
-        //     main_image: ''
-        // })
+        console.log("Hide me after clicked")
+        this.props.endEditing()
     }
+
 
     render() {
         return (
-            <div>
+            <div className="edit-collection-card">
+                <h1>Edit Collection</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Edit Name:</label>
                     <input type="text" name="name" onChange={this.handleChange} defaultValue={this.props.collection?.name}/><br></br>
                     <br></br>
                     <label>Edit Image:</label>
                     <input type="text" name="main_image" onChange={this.handleChange} defaultValue={this.props.collection?.main_image}/><br></br>
-                    <input type="submit"/>
+                    <br></br>
+                    <input type="submit" value="Update Collection"/>
                 </form>
             </div>
         )

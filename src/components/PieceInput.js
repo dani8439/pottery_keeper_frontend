@@ -37,9 +37,9 @@ class PieceInput extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="new-piece-card">
                 <form onSubmit={this.handleSubmit}>
-                    <h2>Add a piece to this collection:</h2>
+                    <h1>Add a piece to this collection:</h1>
                     <label>Piece Name:</label>
                     <input type="text" placeholder="Piece Name" name="piece_name" value={this.state.piece_name} onChange={this.handleChange}/><br></br>
                     <br></br>

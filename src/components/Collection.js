@@ -1,28 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PiecesContainer from '../containers/PiecesContainer';
 import CollectionEdit from './CollectionEdit'
 
 // functional component. Not updating state... 
 
 const Collection = (props) => {
+
+    // useState is a hook, hooks in and automagically assigns. 
+    const [isEditing, setIsEditing] = useState(false)
+
+    const handleEditClick = () => {
+        // setIsEditing(true) -- would always show the edit Form.
+        setIsEditing(!isEditing)
+    }  
     
+    const endEditing = () => {
+        setIsEditing(false)
+    }
 
     // router props and regular props to get to the id
-    // possible this is throwing an error?
     let collection = props.collections.filter(collection => collection.id == props.match.params.id)[0]
     // console.log(collection)
 
     return (
-        <div>
-            {collection ? <h2>{collection.name}</h2> : null}
-            {collection ? <img src={collection.main_image} alt="pottery"/> : null}
+        <React.Fragment>
+            <div className="collection">
+                {collection ? <h2>{collection.name}</h2> : null}
+                {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
+                <br></br>
+                <button onClick={() => handleEditClick(collection)}>EDIT</button>
 
-            <h4>Edit Collection</h4>
-            <CollectionEdit collection={collection}/>
-            <PiecesContainer collection={collection}/>
+            </div>
+            <div>
+                
+                { isEditing && <CollectionEdit collection={collection} endEditing={endEditing}/>}
+                <PiecesContainer collection={collection}/>
+            </div>
+                
             
             
-        </div>
+            
+        </React.Fragment>
     )
 
 }
