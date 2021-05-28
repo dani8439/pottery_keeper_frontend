@@ -21,7 +21,7 @@ const Pieces = (props) => {
             {props.pieces && props.pieces.map(piece =>
             <div className="card" key={piece.id}>
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
-                <img src={piece.image_url} alt="pieces"/>
+                <img src={piece.image_url} alt="pieces" height="375px" width="375px"/>
                 <br></br>
                 <button onClick={() => props.onEdit(piece)}>EDIT</button>
                 <button onClick={() => handleDelete(piece)}>DELETE</button>

@@ -14,7 +14,7 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         <h1>Pottery Keeper</h1>
-        <CollectionsContainer collectionEdit={false}/>
+        <CollectionsContainer/>
         <Footer />
       </div>
     );
