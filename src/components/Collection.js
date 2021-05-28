@@ -6,6 +6,7 @@ import CollectionEdit from './CollectionEdit'
 
 const Collection = (props) => {
 
+    // useState is a hook, hooks in and automagically assigns. 
     const [isEditing, setIsEditing] = useState(false)
 
     const handleEditClick = () => {
@@ -13,6 +14,9 @@ const Collection = (props) => {
         setIsEditing(!isEditing)
     }  
     
+    const endEditing = () => {
+        setIsEditing(!!isEditing)
+    }
 
     // router props and regular props to get to the id
     let collection = props.collections.filter(collection => collection.id == props.match.params.id)[0]
@@ -25,12 +29,11 @@ const Collection = (props) => {
                 {collection ? <img src={collection.main_image} alt="pottery"/> : "Loading..."}
                 <br></br>
                 <button onClick={() => handleEditClick(collection)}>EDIT</button>
-                {/* <button onClick={() => console.log("Clicked!")}>EDIT</button> */}
 
             </div>
             <div>
                 
-                { isEditing && <CollectionEdit collection={collection}/>}
+                { isEditing && <CollectionEdit collection={collection} endEditing={endEditing}/>}
                 <PiecesContainer collection={collection}/>
             </div>
                 

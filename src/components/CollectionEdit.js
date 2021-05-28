@@ -28,7 +28,9 @@ class CollectionEdit extends React.Component {
         event.preventDefault();
         let collection = {...this.state, id: this.props.collection.id}
         this.props.editCollection(collection)
+        console.log("Hide me after clicked")
     }
+
 
     render() {
         return (
