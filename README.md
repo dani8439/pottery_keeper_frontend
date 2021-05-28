@@ -5,7 +5,8 @@ The app is built using a Rails API backend, and a React frontend, created using 
 
 ## How to use it.
 The backend is located here: https://github.com/dani8439/pottery_keeper_backend 
+
 Follow the instructions on how to set up and run the backend. Once the backend is loaded and running, 
 
 1. CD into `pottery_keeper_frontend`.
-2. Run `npm start` and Y when prompted to open the react app on another port. 
+2. Run `npm start` and Y when prompted to open the react app on another. 
