@@ -15,7 +15,7 @@ const Collection = (props) => {
     }  
     
     const endEditing = () => {
-        setIsEditing(!!isEditing)
+        setIsEditing(false)
     }
 
     // router props and regular props to get to the id
