@@ -60,10 +60,11 @@
     color: #F36545;
   }
 
-  /* img {
+  img {
       height: 375px;
       width: 375px;
-  } */
+      object-fit: cover;
+  }
 
   .topnav {
       background-color: #FAF3F3;
@@ -158,4 +159,6 @@
     /* background: url(./images/Footer.jpg); */
     margin: auto;
   }
+
+
 

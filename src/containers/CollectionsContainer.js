@@ -36,4 +36,6 @@ const mapStateToProps = state => {
     }
 }
 
+// mapStateToProps, is getting the icecream out in the store. mapDispatchToProps, is ordering ice cream for the store to sell.
+
 export default connect(mapStateToProps, { fetchCollections })(CollectionsContainer)
