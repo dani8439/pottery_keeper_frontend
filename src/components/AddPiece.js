@@ -8,12 +8,28 @@ class AddPiece extends React.Component {
         piece_name: '',
         pattern_name: '',
         quantity: '',
-        image_url: ''
-        // collection_id: ''
+        image_url: '',
+        collection_id: ''
         
     }
 
+    componentDidUpdate(prevProps) {
+        // When the collections change, i.e. new props set 
+        if (prevProps.collections !== this.props.collections) {
+            if (this.props.collections.length > 0) {
+                // Set initial value of collection_id in state - a new piece will be added to this collection unless the 
+                // user picks a different one. 
+                this.setState({
+                    piece_name: '',
+                    pattern_name: '',
+                    quantity: '',
+                    image_url: '',
+                    collection_id: this.props.collections[0].id
 
+                })
+            }
+        }
+    }
 
 
     handleChange = (event) => {
@@ -26,13 +42,14 @@ class AddPiece extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log(this.state)
-        this.props.addPiece(this.state, this.props.collections.id)
+        // pass in the local collection_id since it can be changed by the user, instead of the props one that we use when adding to a fixed collection
+        this.props.addPiece(this.state, this.state.collection_id)
         this.setState({
             piece_name: '',
             pattern_name: '',
             quantity: '',
-            image_url: ''
-            // collection_id: ''
+            image_url: '',
+            collection_id: ''
         })
 
     }
@@ -55,7 +72,7 @@ class AddPiece extends React.Component {
                     <input type="text" placeholder="Quantity" name="quantity" value={this.state.quantity} onChange={this.handleChange}/><br></br>
                     <br></br>
                     <label>Collection:</label>
-                    {/* not capturing collection_id, all of this is wrong */}
+                    {/* Thought was wrong, but it's all right :-D.*/}
                     <select placeholder="Collection" name="collection_id"  value={this.state.collection_id} onChange={this.handleChange}>
                         {this.props.collections.map(collection => <option key={collection.id}>{collection.name}</option>)}  
                     </select><br></br>
@@ -66,19 +83,6 @@ class AddPiece extends React.Component {
         )
     }
 }
-
-// const mapStateToProps = state => {
-//     return {
-//         collectionId: state.collection
-//     }
-// }
-
-// {props.collections.map(collection =>
-//     <div key={collection.id}>
-//         <Link to={`/collections/${collection.id}`}>{collection.name}</Link>
-//     </div>)}
-
-
 
 
 export default connect(null, { addPiece })(AddPiece);
