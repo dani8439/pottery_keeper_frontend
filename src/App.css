@@ -60,7 +60,7 @@
     color: #F36545;
   }
 
-  img {
+  .smallImage {
       height: 375px;
       width: 375px;
       object-fit: cover;
