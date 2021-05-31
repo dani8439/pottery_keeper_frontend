@@ -14,7 +14,7 @@ class Pieces extends React.Component {
 
 
     handleDelete = (piece) => {
-        this.state.deletePiece(piece.id, piece.collection_id)
+        this.props.deletePiece(piece.id, piece.collection_id)
     }
 
     handleInputChange = (e) => {
@@ -38,8 +38,7 @@ class Pieces extends React.Component {
                 <img src={piece.image_url} alt="pieces" className="smallImage"/>
                 <br></br>
                 <button onClick={() => this.props.onEdit(piece)}>EDIT</button>
-                {/* throwing an error now.  this.state.handleDelete is not a function*/}
-                <button onClick={() => this.props.handleDelete(piece)}>DELETE</button>
+                <button onClick={() => this.handleDelete(piece)}>DELETE</button>
             </div>
             )
 
