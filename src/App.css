@@ -141,9 +141,11 @@
   .homepage {
     text-align: center;
     background-color: #F9F8F7;
-    /* height: 100%;
-    width: 100%; */
-    /* add a class to the image to override.  */
+  }
+
+  .searchbar {
+    justify-content: center;
+
   }
 
 

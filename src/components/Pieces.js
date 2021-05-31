@@ -38,7 +38,8 @@ class Pieces extends React.Component {
                 <img src={piece.image_url} alt="pieces" className="smallImage"/>
                 <br></br>
                 <button onClick={() => this.props.onEdit(piece)}>EDIT</button>
-                <button onClick={() => this.state.handleDelete(piece)}>DELETE</button>
+                {/* throwing an error now.  this.state.handleDelete is not a function*/}
+                <button onClick={() => this.props.handleDelete(piece)}>DELETE</button>
             </div>
             )
 
@@ -48,7 +49,10 @@ class Pieces extends React.Component {
     render() {
         return (
             <div>
-                <input type="text" placeholder="Search for a piece..." onChange={this.handleInputChange} /><br></br>
+                <br></br>
+                    <label className="searchbar">Search for a Piece:</label>
+                    <input type="text" placeholder="Search for a piece..." onChange={this.handleInputChange} /><br></br>
+                
                 {this.makePieceCards()}
             </div>
         )
