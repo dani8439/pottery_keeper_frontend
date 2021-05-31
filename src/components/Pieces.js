@@ -27,15 +27,17 @@ class Pieces extends React.Component {
         let displayedPieces = this.props.pieces
         // console.log(this.state.seach)
         if(this.state.search){
-            displayedPieces = this.state.pieces && this.state.pieces.filter((piece) => piece.piece_name.toLowerCase().includes(this.state.search.toLowerCase()))
+            displayedPieces = this.props.pieces && this.props.pieces.filter((piece) => piece.piece_name.toLowerCase().includes(this.state.search.toLowerCase()))
         }
+
+        // {/* Add in check because first time props come through, it's undefined. With react, when you refresh page, state and store are cleared out.*/}
 
         return displayedPieces && displayedPieces.map(piece =>
             <div className="card" key={piece.id}>
                 <h3>{piece.pattern_name} {piece.piece_name} - {piece.quantity}</h3>
                 <img src={piece.image_url} alt="pieces" className="smallImage"/>
                 <br></br>
-                <button onClick={() => this.state.onEdit(piece)}>EDIT</button>
+                <button onClick={() => this.props.onEdit(piece)}>EDIT</button>
                 <button onClick={() => this.state.handleDelete(piece)}>DELETE</button>
             </div>
             )
@@ -45,7 +47,6 @@ class Pieces extends React.Component {
 
     render() {
         return (
-            // {/* Add in check because first time props come through, it's undefined. With react, when you refresh page, state and store are cleared out.*/}
             <div>
                 <input type="text" placeholder="Search for a piece..." onChange={this.handleInputChange} /><br></br>
                 {this.makePieceCards()}
