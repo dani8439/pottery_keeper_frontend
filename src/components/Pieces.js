@@ -6,7 +6,6 @@ import { editPiece } from '../actions/editPiece';
 
 class Pieces extends React.Component {
     state = {
-        pieces: []
 
     }
 
