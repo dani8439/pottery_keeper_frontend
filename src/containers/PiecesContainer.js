@@ -17,7 +17,7 @@ class PiecesContainer extends React.Component {
     }
 
     hideEdit = () => {
-        console.log("hide Me")
+        // console.log("hide Me")
         this.setState({
             pieceToBeEdited: null
         })

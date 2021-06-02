@@ -22,7 +22,7 @@ class PieceEdit extends React.Component {
             image_url: this.props.piece?.image_url
 
         })
-        console.log("COMPONENT DID MOUNT?")
+        // console.log("COMPONENT DID MOUNT?")
     }
 
     handleChange = (event) => {
