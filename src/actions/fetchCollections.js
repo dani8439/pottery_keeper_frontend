@@ -3,7 +3,6 @@
 export function fetchCollections(action) {
     // thunk allowing us to return a function inside another function, passing in dispatch function as an argument, so we can use inside of our action creater, and dispatch response from our fetch request.
     return (dispatch) => {
-        console.log('inside fetch collections')
 
         fetch('http://localhost:3000/api/v1/collections')
         .then(resp => resp.json())
@@ -12,7 +11,6 @@ export function fetchCollections(action) {
             type: 'FETCH_COLLECTIONS', 
             payload: data
         }))
-
     }
 
     
