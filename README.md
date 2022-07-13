@@ -7,7 +7,7 @@ The app is built using a Rails API backend, and a React frontend, created using 
 ## Live Demo
 Pottery Keeper is hosted on Heroku. If you would like to see a live demo of the project, and play around click [here](https://pottery-keeper-api.herokuapp.com/collections)
 
-## How to use it.
+## How to use it
 The backend is located here: https://github.com/dani8439/pottery_keeper_backend 
 
 Follow the instructions on how to set up and run the backend. Once the backend is loaded and running:
