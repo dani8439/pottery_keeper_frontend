@@ -4,7 +4,7 @@ export function fetchCollections(action) {
     // thunk allowing us to return a function inside another function, passing in dispatch function as an argument, so we can use inside of our action creater, and dispatch response from our fetch request.
     return (dispatch) => {
 
-        fetch('http://localhost:3000/api/v1/collections')
+        fetch('https://potterykeeper-api.herokuapp.com/api/v1/collections')
         .then(resp => resp.json())
         .then(data => dispatch({
             // dispatch to our reducer.

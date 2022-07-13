@@ -1,6 +1,6 @@
 export const addCollection = (data) => {
   return (dispatch) => {
-    fetch("http://localhost:3000/api/v1/collections", {
+    fetch("https://potterykeeper-api.herokuapp.com/api/v1/collections", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json"

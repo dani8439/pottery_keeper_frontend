@@ -2,7 +2,7 @@ export const editPiece = (piece) => {
     // debugger;
 
     return(dispatch) => {
-        fetch(`http://localhost:3000/api/v1/pieces/${piece.id}`, {
+        fetch(`https://potterykeeper-api.herokuapp.com/api/v1/pieces/${piece.id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

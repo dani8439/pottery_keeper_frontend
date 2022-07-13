@@ -1,7 +1,7 @@
 export const deletePiece = (pieceId) => {
 
     return (dispatch) => {
-        return fetch(`http://localhost:3000/api/v1/pieces/${pieceId}`, {
+        return fetch(`https://potterykeeper-api.herokuapp.com/api/v1/pieces/${pieceId}`, {
             method: 'DELETE'
         })
         .then(resp => resp.json())
